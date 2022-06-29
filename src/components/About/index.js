@@ -1,6 +1,8 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -8,7 +10,7 @@ const About = () => {
     useEffect(() => {
         return () => setTimeout(() => {
           setLetterClass('text-animate-hover')
-        }, 4000)
+        }, 3000)
     }, [])
 
 
@@ -31,6 +33,29 @@ const About = () => {
                 <p>
                     If i had to describe myself it would simply be one word, Nerd. Video games, anime, D&D, you name it I probably love it.
                 </p>
+            </div>
+
+            <div className='stage-cube-cont'>
+                <div className='cubespinner'>
+                    <div className='face1'>
+                        <FontAwesomeIcon icon={faAngular} />
+                    </div>
+                    <div className='face2'>
+                        <FontAwesomeIcon icon={faHtml5} />
+                    </div>
+                    <div className='face3'>
+                        <FontAwesomeIcon icon={faCss3} />
+                    </div>
+                    <div className='face4'>
+                        <FontAwesomeIcon icon={faReact} />
+                    </div>
+                    <div className='face5'>
+                        <FontAwesomeIcon icon={faJsSquare} />
+                    </div>
+                    <div className='face6'>
+                        <FontAwesomeIcon icon={faGitAlt} />
+                    </div>
+                </div>
             </div>
         </div>
     )
