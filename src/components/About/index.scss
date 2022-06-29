@@ -2,7 +2,6 @@
     width: 50%;
     height: 100%;
     top: 0;
-    padding-top: 33%;
     margin-left: 0;
     position: absolute;
     right: 0;
@@ -17,6 +16,9 @@
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
     margin-left: calc(50% - 100px);
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
 
     div {
         position: absolute;
