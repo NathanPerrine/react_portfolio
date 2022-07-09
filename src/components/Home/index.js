@@ -11,11 +11,11 @@ const Home = () => {
     const nameArray = ['a', 't', 'h', 'a', 'n']
     const jobArray = ['A', ' ', 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
 
-    // useEffect(() => {
-    //     return () => setTimeout(() => {
-    //       setLetterClass('text-animate-hover')
-    //     }, 4000)
-    // }, [])
+    useEffect(() => {
+        return () => setTimeout(() => {
+          setLetterClass('text-animate-hover')
+        }, 4000)
+    }, [])
 
     return (
         <>
