@@ -6,8 +6,9 @@ import emailjs from '@emailjs/browser'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const Contact = () => {
-    const [letterClass, setLetterClass] = useState('text-animate')
-    const refForm = useRef()
+    const [letterClass, setLetterClass] = useState('text-animate');
+    const refForm = useRef();
+    const buttonRef = useRef(null);
 
     useEffect(() => {
         return () => setTimeout(() => {
@@ -18,7 +19,13 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs
+        if (buttonRef.current.disabled === false){
+            buttonRef.current.disabled = true;
+
+            console.log('button disabled')
+            console.log('sending email')
+            
+            emailjs
             .sendForm(
                 'service_na76qwk',
                 'template_nhhrqvm', 
@@ -27,13 +34,15 @@ const Contact = () => {
             )
             .then(
                 () => {
-                    alert('Message successfully sent!')
-                    window.location.reload(false)
+                    alert('Message successfully sent!');
+                    window.location.reload(false);
                 },
                 () => {
-                    alert('Failed to send the message, please try again.')
+                    alert('Failed to send the message, please try again.');
+                    buttonRef.current.disabled = false;
                 }
             )
+        }
     }
 
     return (
@@ -66,7 +75,7 @@ const Contact = () => {
                                     <textarea placeholder="Message" name="message" required />
                                 </li>
                                 <li>
-                                    <input type="submit" className='flat-button' value="SEND" />
+                                    <input type="submit" className='flat-button' ref={buttonRef} value="SEND" />
                                 </li>
                             </ul>
                         </form>

@@ -72,15 +72,20 @@
         margin-right: 5px;
         margin-bottom: 5px;
 
-        &:hover {
+        &:hover:not([disabled]) {
             color: #ffee10;
             border: 1px solid #ffee10;
             text-shadow: 0 0 5px #ffee10;
             box-shadow: 0 0 5px #ffee10;
         }
 
-        &:active {
+        &:active:not([disabled]) {
             transform: scale(0.98);
+        }
+
+        &:disabled {
+            color: #808080;
+            border-color: #808080;
         }
     }
 }
