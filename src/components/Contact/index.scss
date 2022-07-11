@@ -45,6 +45,11 @@
         color: #fff;
         padding: 0 20px;
         box-sizing: border-box;
+
+        &:focus {
+            border: 1px solid rgba(81, 203, 238, 1);
+        }
+
     }
 
     textarea {
@@ -57,6 +62,10 @@
         padding: 20px;
         min-height: 150px;
         box-sizing: border-box;
+
+        &:focus {
+            border: 1px solid rgba(81, 203, 238, 1);
+        }
     }
     
     .flat-button {

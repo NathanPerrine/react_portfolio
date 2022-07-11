@@ -1,8 +1,9 @@
 import './index.scss'
+import PythonLogo from '../../assets/images/Python-logo.png'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faGitAlt, faHtml5, faJsSquare, faReact, faPython } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 
 const About = () => {
@@ -33,14 +34,14 @@ const About = () => {
                         I'm quietly confident, naturally very curious, and constantly trying to improve my skill set by learning more about technologies I already use and love regularly, as well as taking time to research and practice with the ones that are new to me.
                     </p>
                     <p>
-                        If i had to describe myself it would simply be one word, Nerd. Video games, anime, D&D, you name it I probably love it.
+                        If I had to describe myself it would simply be one word, Nerd. Video games, anime, tech, D&D, you name it I probably love it.
                     </p>
                 </div>
 
                 <div className='stage-cube-cont'>
                     <div className='cubespinner'>
                         <div className='face1'>
-                            <FontAwesomeIcon icon={faAngular} />
+                            <img src={PythonLogo} alt={'Python Logo'} />
                         </div>
                         <div className='face2'>
                             <FontAwesomeIcon icon={faHtml5} />

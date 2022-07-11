@@ -24,7 +24,7 @@ const Contact = () => {
 
             console.log('button disabled')
             console.log('sending email')
-            
+
             emailjs
             .sendForm(
                 'service_na76qwk',
@@ -57,7 +57,7 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        I'm interested in freelance as well as full time employment. If you have any opportunities to share, any questions, or just want to contact me please do so using the form below.
+                        I'm interested in freelance work as well as full time employment. If you have any opportunities to share, any questions, or just want to contact me please do so using the form below.
                     </p>
                     <div className='contact-form'>
                         <form ref={refForm} onSubmit={sendEmail}>
